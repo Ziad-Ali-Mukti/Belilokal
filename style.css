@@ -1,160 +1,193 @@
 body {
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  background: #f7f7f7;
-  color: #333;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    background: #f7f7f7;
+    color: #333;
 }
 
-/* HEADER */
+/* HEADER BARU */
 header {
-  background: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  padding: 1rem;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+    background: #ffffff; /* Tetap putih agar bersih */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem 1.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
-.header-top h1 {
-  margin: 0;
-  color: #ff6600;
-  font-size: 2rem;
+.header-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.header-top p {
-  margin: 0;
-  color: #666;
-  font-size: 0.9rem;
+.header-main h1 {
+    margin: 0;
+    color: #00704A; /* Hijau Daun Khas Jembrana */
+    font-size: 2rem;
 }
 
+.header-main p {
+    margin: 0;
+    color: #555; /* Ubah sedikit agar lebih kontras dengan hijau */
+    font-size: 0.8rem;
+}
+
+.header-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Tombol Ikon */
+.icon-btn {
+    background: none;
+    border: none;
+    color: #00704A; /* Ikon juga menjadi hijau */
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.3s;
+}
+
+.icon-btn:hover {
+    color: #008f5d; /* Hijau sedikit lebih terang saat hover */
+}
+
+/* MENU BAR BARU */
 .menu-bar {
-  margin-top: 0.8rem;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.6rem;
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
-.menu-btn {
-  background: #ff6600;
-  color: white;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-  font-weight: 500;
+.menu-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    transition: background-color 0.3s;
 }
 
-.menu-btn:hover {
-  background: #ff8533;
+.menu-link:hover {
+    background-color: #e0f2e0; /* Background hover hijau muda */
+    color: #00704A; /* Warna teks hover hijau */
 }
 
 /* PRODUK */
 #productSection {
-  padding: 1.5rem;
-  text-align: center;
+    padding: 1.5rem;
+    text-align: center;
 }
 
 #product-list.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .product {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  padding: 1rem;
-  transition: transform 0.3s;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    padding: 1rem;
+    transition: transform 0.3s;
 }
 
 .product:hover {
-  transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
 .product img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 8px;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 .product h3 {
-  margin: 0.5rem 0 0.2rem;
-  color: #333;
+    margin: 0.5rem 0 0.2rem;
+    color: #333;
 }
 
 .product p {
-  color: #666;
-  font-size: 0.9rem;
+    color: #666;
+    font-size: 0.9rem;
 }
 
 .product button {
-  background: #ff6600;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-  margin-top: 0.5rem;
+    background: #D9880B; /* Oranye Kuning Emas */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 0.5rem;
 }
 
 .product button:hover {
-  background: #ff8533;
+    background: #f7a81b; /* Oranye Kuning Emas sedikit lebih terang */
 }
 
 /* POPUP LOGIN */
 #authPopup {
-  display: none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.5);
-  justify-content: center;
-  align-items: center;
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
 }
 
 #authBox {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  text-align: center;
-  width: 300px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+#authBox p {
+    font-size: 0.9rem;
+    color: #666;
 }
 
 #authBox input {
-  width: 90%;
-  padding: 0.6rem;
-  margin: 0.5rem 0;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+    width: 90%;
+    padding: 0.6rem;
+    margin: 0.5rem 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
 }
 
 #authBox button {
-  background: #ff6600;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  margin: 0.3rem;
+    background: #D9880B; /* Oranye Kuning Emas untuk tombol popup */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 0.3rem;
 }
 
 #authBox button:hover {
-  background: #ff8533;
+    background: #f7a81b; /* Oranye Kuning Emas sedikit lebih terang */
 }
 
 /* FOOTER */
 footer {
-  background: #ff6600;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+    background: #00704A; /* Footer menjadi hijau tua */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
 }
