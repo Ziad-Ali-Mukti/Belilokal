@@ -10,16 +10,16 @@
 
   <!-- HEADER -->
   <header>
-    <div class="header-top">
+    <div class="logo">
       <h1>🛒 BeliLokal</h1>
       <p>Dukung Produk UMKM Jembrana</p>
     </div>
-    <div class="menu-bar">
-      <button id="btnHome" class="menu-btn">🏠 Home</button>
-      <button id="btnUser" class="menu-btn">👤 User</button>
-      <button id="btnAdmin" class="menu-btn">🛠️ Admin</button>
-      <button id="btnLogout" class="menu-btn" style="display:none;">🚪 Logout</button>
-    </div>
+
+    <nav id="mainNav">
+      <button id="btnHome">Home</button>
+      <button id="btnUser">Akun</button>
+      <button id="btnLogout" style="display:none;">Logout</button>
+    </nav>
   </header>
 
   <!-- PRODUK -->
@@ -28,15 +28,17 @@
     <div id="product-list" class="grid"></div>
   </section>
 
-  <!-- POPUP LOGIN -->
+  <!-- POPUP LOGIN/REGISTER -->
   <div id="authPopup">
     <div id="authBox">
       <h3>Masuk / Daftar</h3>
       <input type="email" id="username" placeholder="Email" />
       <input type="password" id="password" placeholder="Kata sandi" />
+      <br />
       <button id="loginBtn">Login</button>
       <button id="registerBtn">Daftar</button>
-      <button id="closeAuth">❌ Tutup</button>
+      <br /><br />
+      <button id="closeAuth">Tutup</button>
     </div>
   </div>
 
