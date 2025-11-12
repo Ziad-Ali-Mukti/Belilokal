@@ -1,67 +1,79 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BeliLokal – Marketplace UMKM Jembrana</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BeliLokal – Marketplace UMKM Jembrana</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <h1>🛒 BeliLokal</h1>
-    <nav>
-      <button id="btnHome">Home</button>
-      <button id="btnLogin">Login</button>
-      <button id="btnAdmin">Admin</button>
-      <button id="btnLogout" style="display:none;">Logout</button>
-    </nav>
-  </header>
+    <header>
+        <div class="header-main">
+            <h1>🛒 BeliLokal</h1>
+            <p>Dukung Produk UMKM Jembrana</p>
+            <div class="header-icons">
+                <button id="btnCart" class="icon-btn" title="Keranjang Belanja">
+                    <i class="fas fa-shopping-cart"></i>
+                </button>
+                <button id="btnUser" class="icon-btn" title="Akun User">
+                    <i class="fas fa-user"></i>
+                </button>
+                <button id="btnAdmin" class="icon-btn admin-btn" title="Halaman Admin">
+                    <i class="fas fa-tools"></i>
+                </button>
+                <button id="btnLogout" class="icon-btn logout-btn" style="display:none;" title="Logout">
+                    <i class="fas fa-sign-out-alt"></i>
+                </button>
+            </div>
+        </div>
 
-  <!-- LOGIN / REGISTER -->
-  <section id="authSection">
-    <h2>Login / Register</h2>
-    <input type="text" id="username" placeholder="Nama pengguna">
-    <input type="password" id="password" placeholder="Kata sandi">
-    <button id="loginBtn">Login</button>
-    <button id="registerBtn">Daftar</button>
-  </section>
+        <div class="menu-bar">
+            <a href="#productSection" class="menu-link">🏠 Home</a>
+            <a href="#" class="menu-link">🏷️ Promo Hari Ini</a>
+            <a href="#" class="menu-link">📦 Semua Kategori</a>
+            <a href="#" class="menu-link">📝 Cara Belanja</a>
+        </div>
+    </header>
 
-  <!-- DAFTAR PRODUK -->
-  <section id="productSection" style="display:none;">
-    <h2>Produk UMKM Jembrana</h2>
-    <div id="product-list"></div>
-  </section>
+    <section id="productSection">
+        <h2>Produk Unggulan UMKM Jembrana</h2>
+        <div id="product-list" class="grid"></div>
+    </section>
 
-  <!-- PEMBAYARAN -->
-  <section id="paymentSection" style="display:none;">
-    <h2>Pilih Metode Pembayaran</h2>
-    <button class="payBtn" data-method="QRIS">QRIS</button>
-    <button class="payBtn" data-method="COD">COD</button>
-    <button class="payBtn" data-method="Transfer">Transfer Bank</button>
-    <p id="paymentStatus"></p>
-  </section>
+    <div id="authPopup">
+        <div id="authBox">
+            <h3>Masuk / Daftar</h3>
+            <p>Silakan Masuk atau Daftar untuk melanjutkan pembelian.</p>
+            <input type="email" id="username" placeholder="Email" />
+            <input type="password" id="password" placeholder="Kata sandi" />
+            <button id="loginBtn">Login</button>
+            <button id="registerBtn">Daftar</button>
+            <button id="closeAuth">❌ Tutup</button>
+        </div>
+    </div>
 
-  <!-- ULASAN -->
-  <section id="reviewSection" style="display:none;">
-    <h2>Berikan Ulasan</h2>
-    <textarea id="reviewText" placeholder="Tulis ulasan..."></textarea>
-    <button id="sendReview">Kirim Ulasan</button>
-    <p id="reviewMsg"></p>
-  </section>
+    <section id="paymentSection" style="display:none;">
+        <h2>Pilih Metode Pembayaran</h2>
+        <button class="payBtn" data-method="QRIS">QRIS</button>
+        <button class="payBtn" data-method="COD">COD</button>
+        <button class="payBtn" data-method="Transfer">Transfer Bank</button>
+        <p id="paymentStatus"></p>
+    </section>
 
-  <!-- DASHBOARD ADMIN -->
-  <section id="adminSection" style="display:none;">
-    <h2>Dashboard Admin</h2>
-    <p>Total Pengguna: <span id="userCount">0</span></p>
-    <p>Total Produk: <span id="productCount">0</span></p>
-  </section>
+    <section id="reviewSection" style="display:none;">
+        <h2>Berikan Ulasan</h2>
+        <textarea id="reviewText" placeholder="Tulis ulasan..."></textarea>
+        <button id="sendReview">Kirim Ulasan</button>
+        <p id="reviewMsg"></p>
+    </section>
 
-  <footer>
-    <p>© 2025 BeliLokal | Dukung Produk UMKM Lokal</p>
-  </footer>
+    <footer>
+        <p>© 2025 BeliLokal | Dukung Produk UMKM Lokal</p>
+    </footer>
 
-  <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
 </body>
 </html>
