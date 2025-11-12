@@ -1,4 +1,4 @@
-// Supabase setup (Pastikan Kunci dan URL Anda Benar)
+// Supabase setup (Gunakan URL dan KEY Anda yang benar)
 const SUPABASE_URL = "https://cyvnmofeesuwajrygkis.supabase.co";
 const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...";
 const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
@@ -15,7 +15,7 @@ const btnAdmin = document.getElementById("btnAdmin");
 
 let currentUser = null; 
 
-// Tambahkan data produk dummy 10 item, termasuk URL gambar placeholder
+// Tambahkan data produk dummy 10 item
 const dummyProducts = [
     { id: 1, name: "Kopi Robusta Jembrana", price: 55000, image_url: "https://via.placeholder.com/150/00704A/FFFFFF?text=Kopi+Lokal", description: "Biji kopi pilihan dari kebun Jembrana." },
     { id: 2, name: "Tenun Ikat Khas", price: 350000, image_url: "https://via.placeholder.com/150/D9880B/FFFFFF?text=Tenun+Jembrana", description: "Kain tenun ikat asli, motif tradisional." },
@@ -43,7 +43,7 @@ async function checkAuthStatus() {
     }
 }
 
-// === TAMPIL PRODUK (MENGGUNAKAN 10 PRODUK DUMMY) ===
+// === TAMPIL 10 PRODUK DUMMY ===
 async function loadProducts() {
     let data = dummyProducts; 
 
@@ -71,7 +71,6 @@ async function loadProducts() {
             if (!currentUser) {
                 authPopup.style.display = "flex"; 
             } else {
-                // Tampilkan bagian pembayaran jika sudah login
                 document.getElementById("paymentSection").style.display = "block";
                 window.scrollTo(0, document.body.scrollHeight);
             }
@@ -79,28 +78,26 @@ async function loadProducts() {
     });
 }
 
-// === FUNGSI MENU POJOK KANAN ATAS ===
+// === FUNGSI 3 MENU POJOK KANAN ATAS ===
 
-// 1. Ikon Keranjang (btnCart): Berfungsi memicu login/notifikasi
+// 1. Ikon Keranjang (btnCart)
 btnCart.onclick = () => {
     if (currentUser) {
         alert("Ini adalah Keranjang Belanja Anda.");
     } else {
         authPopup.style.display = "flex";
-        alert("Silakan Login/Daftar untuk melihat Keranjang.");
     }
 };
 
-// 2. Ikon User (btnUser): Berfungsi memicu Login/Daftar
+// 2. Ikon User (btnUser)
 btnUser.onclick = () => {
     authPopup.style.display = "flex";
 }
 
-// 3. Ikon Admin (btnAdmin): Berfungsi memicu login/notifikasi admin
+// 3. Ikon Admin (btnAdmin)
 btnAdmin.onclick = () => {
     if (currentUser) {
         alert("Anda diarahkan ke Halaman Admin.");
-        // Anda bisa tambahkan window.location.href = "admin.html"; di sini
     } else {
         authPopup.style.display = "flex";
         alert("Hanya Admin yang dapat mengakses ini. Silakan Login.");

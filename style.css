@@ -5,9 +5,9 @@ body {
     color: #333;
 }
 
-/* HEADER BARU */
+/* HEADER BARU (Hijau Jembrana) */
 header {
-    background: #ffffff; /* Tetap putih agar bersih */
+    background: #ffffff; 
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     padding: 1rem 1.5rem;
     position: sticky;
@@ -29,7 +29,7 @@ header {
 
 .header-main p {
     margin: 0;
-    color: #555; /* Ubah sedikit agar lebih kontras dengan hijau */
+    color: #555; 
     font-size: 0.8rem;
 }
 
@@ -50,7 +50,7 @@ header {
 }
 
 .icon-btn:hover {
-    color: #008f5d; /* Hijau sedikit lebih terang saat hover */
+    color: #008f5d; 
 }
 
 /* MENU BAR BARU */
@@ -75,7 +75,7 @@ header {
 
 .menu-link:hover {
     background-color: #e0f2e0; /* Background hover hijau muda */
-    color: #00704A; /* Warna teks hover hijau */
+    color: #00704A; 
 }
 
 /* PRODUK */
@@ -86,7 +86,8 @@ header {
 
 #product-list.grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    /* Membuat grid responsif untuk 180px per kolom */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
     gap: 1rem;
     margin-top: 1rem;
 }
@@ -121,7 +122,7 @@ header {
 }
 
 .product button {
-    background: #D9880B; /* Oranye Kuning Emas */
+    background: #D9880B; /* Oranye Kuning Emas (Aksen) */
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -132,7 +133,7 @@ header {
 }
 
 .product button:hover {
-    background: #f7a81b; /* Oranye Kuning Emas sedikit lebih terang */
+    background: #f7a81b;
 }
 
 /* POPUP LOGIN */
@@ -170,7 +171,7 @@ header {
 }
 
 #authBox button {
-    background: #D9880B; /* Oranye Kuning Emas untuk tombol popup */
+    background: #D9880B; 
     color: white;
     border: none;
     padding: 0.5rem 1rem;
@@ -180,7 +181,7 @@ header {
 }
 
 #authBox button:hover {
-    background: #f7a81b; /* Oranye Kuning Emas sedikit lebih terang */
+    background: #f7a81b;
 }
 
 /* FOOTER */
