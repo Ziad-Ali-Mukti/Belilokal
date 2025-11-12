@@ -17,12 +17,19 @@ const btnAdmin = document.getElementById("btnAdmin"); // Ikon Admin
 let currentUser = null; 
 
 // Tambahkan data produk dummy untuk testing
+// DITAMBAH 5 PRODUK BARU SEHINGGA TOTAL MENJADI 10
 const dummyProducts = [
     { id: 1, name: "Kopi Robusta Jembrana", price: 55000, image_url: "https://via.placeholder.com/150/00704A/FFFFFF?text=Kopi+Lokal", description: "Biji kopi pilihan dari kebun Jembrana." },
     { id: 2, name: "Tenun Ikat Khas", price: 350000, image_url: "https://via.placeholder.com/150/D9880B/FFFFFF?text=Tenun+Jembrana", description: "Kain tenun ikat asli, motif tradisional." },
     { id: 3, name: "Pie Susu Cokelat", price: 25000, image_url: "https://via.placeholder.com/150/808080/FFFFFF?text=Pie+Susu", description: "Camilan khas Bali dengan rasa cokelat." },
     { id: 4, name: "Madu Hutan Jembrana", price: 85000, image_url: "https://via.placeholder.com/150/4A90E2/FFFFFF?text=Madu+Murni", description: "Madu murni yang dipanen dari hutan." },
-    { id: 5, name: "Batik Pewarna Alam", price: 210000, image_url: "https://via.placeholder.com/150/9B59B6/FFFFFF?text=Batik+Alam", description: "Batik tulis dengan pewarna dari bahan alami." }
+    { id: 5, name: "Batik Pewarna Alam", price: 210000, image_url: "https://via.placeholder.com/150/9B59B6/FFFFFF?text=Batik+Alam", description: "Batik tulis dengan pewarna dari bahan alami." },
+    // --- 5 PRODUK BARU ---
+    { id: 6, name: "Keripik Singkong Pedas", price: 18000, image_url: "https://via.placeholder.com/150/FF4500/FFFFFF?text=Keripik", description: "Keripik singkong renyah rasa pedas." },
+    { id: 7, name: "Lukisan Pemandangan", price: 550000, image_url: "https://via.placeholder.com/150/191970/FFFFFF?text=Lukisan", description: "Lukisan kanvas pemandangan alam Jembrana." },
+    { id: 8, name: "Sandal Kulit Handmade", price: 150000, image_url: "https://via.placeholder.com/150/B8860B/FFFFFF?text=Sandal+Kulit", description: "Sandal kulit asli buatan tangan." },
+    { id: 9, name: "Minyak Kelapa Murni", price: 45000, image_url: "https://via.placeholder.com/150/3CB371/FFFFFF?text=Minyak+VCO", description: "Virgin Coconut Oil (VCO) tanpa pemanasan." },
+    { id: 10, name: "Gula Aren Organik", price: 30000, image_url: "https://via.placeholder.com/150/CD853F/FFFFFF?text=Gula+Aren", description: "Gula aren murni hasil sadapan petani lokal." }
 ];
 
 // === CEK STATUS OTENTIKASI AWAL ===
@@ -42,7 +49,7 @@ async function checkAuthStatus() {
 
 // === TAMPIL PRODUK ===
 async function loadProducts() {
-    let data = dummyProducts; // Menggunakan data dummy 5 produk
+    let data = dummyProducts; // Menggunakan data dummy 10 produk
 
     productList.innerHTML = "";
     if (!data || data.length === 0) {
