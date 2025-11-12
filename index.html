@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BeliLokal – Marketplace UMKM Jembrana</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-top">
+      <h1>🛒 BeliLokal</h1>
+      <p>Dukung Produk UMKM Jembrana</p>
+    </div>
+    <div class="menu-bar">
+      <button id="btnHome" class="menu-btn">🏠 Home</button>
+      <button id="btnUser" class="menu-btn">👤 User</button>
+      <button id="btnAdmin" class="menu-btn">🛠️ Admin</button>
+      <button id="btnLogout" class="menu-btn" style="display:none;">🚪 Logout</button>
+    </div>
+  </header>
+
+  <!-- PRODUK -->
+  <section id="productSection">
+    <h2>Produk UMKM Jembrana</h2>
+    <div id="product-list" class="grid"></div>
+  </section>
+
+  <!-- POPUP LOGIN -->
+  <div id="authPopup">
+    <div id="authBox">
+      <h3>Masuk / Daftar</h3>
+      <input type="email" id="username" placeholder="Email" />
+      <input type="password" id="password" placeholder="Kata sandi" />
+      <button id="loginBtn">Login</button>
+      <button id="registerBtn">Daftar</button>
+      <button id="closeAuth">❌ Tutup</button>
+    </div>
+  </div>
+
+  <!-- PEMBAYARAN -->
+  <section id="paymentSection" style="display:none;">
+    <h2>Pilih Metode Pembayaran</h2>
+    <button class="payBtn" data-method="QRIS">QRIS</button>
+    <button class="payBtn" data-method="COD">COD</button>
+    <button class="payBtn" data-method="Transfer">Transfer Bank</button>
+    <p id="paymentStatus"></p>
+  </section>
+
+  <!-- ULASAN -->
+  <section id="reviewSection" style="display:none;">
+    <h2>Berikan Ulasan</h2>
+    <textarea id="reviewText" placeholder="Tulis ulasan..."></textarea>
+    <button id="sendReview">Kirim Ulasan</button>
+    <p id="reviewMsg"></p>
+  </section>
+
+  <footer>
+    <p>© 2025 BeliLokal | Dukung Produk UMKM Lokal</p>
+  </footer>
+
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>

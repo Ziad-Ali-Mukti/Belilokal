@@ -1,0 +1,160 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: #f7f7f7;
+  color: #333;
+}
+
+/* HEADER */
+header {
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-top h1 {
+  margin: 0;
+  color: #ff6600;
+  font-size: 2rem;
+}
+
+.header-top p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.menu-bar {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.menu-btn {
+  background: #ff6600;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.menu-btn:hover {
+  background: #ff8533;
+}
+
+/* PRODUK */
+#productSection {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+#product-list.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.product {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  transition: transform 0.3s;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+}
+
+.product img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product h3 {
+  margin: 0.5rem 0 0.2rem;
+  color: #333;
+}
+
+.product p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.product button {
+  background: #ff6600;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 0.5rem;
+}
+
+.product button:hover {
+  background: #ff8533;
+}
+
+/* POPUP LOGIN */
+#authPopup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+#authBox {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+#authBox input {
+  width: 90%;
+  padding: 0.6rem;
+  margin: 0.5rem 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+#authBox button {
+  background: #ff6600;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 0.3rem;
+}
+
+#authBox button:hover {
+  background: #ff8533;
+}
+
+/* FOOTER */
+footer {
+  background: #ff6600;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
